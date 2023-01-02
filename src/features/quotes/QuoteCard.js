@@ -1,4 +1,5 @@
 import React from "react";
+import quotesReducer from "./quotesSlice";
 
 function QuoteCard(props) {
   return (
@@ -6,10 +7,10 @@ function QuoteCard(props) {
       <div className="card card-inverse card-success card-primary mb-3 text-center">
         <div className="card-block">
           <blockquote className="card-blockquote">
-            <p>{/*Render Quote Content*/}</p>
+            <p>{/*Render Quote Content*/props.content}</p>
             <footer>
               - author{" "}
-              <cite title="Source Title">{/*Render Quote Author*/}</cite>
+              <cite title="Source Title">{/*Render Quote Author*/props.author}</cite>
             </footer>
           </blockquote>
         </div>
